@@ -1,0 +1,29 @@
+<form #concessionform="ngForm" novalidate (ngSubmit)="onSubmit()">
+    <h1>{{type}}</h1>
+   
+    <div class="form-group">
+        <label for="Nom_concession">Nom concession</label>
+        <input required #nomconcession="ngModel"  [(ngModel)]="concessiondata[0]" [class.is-invalid]="nomconcession.invalid" name="Nom_concession"  type="text" class="form-control">
+        
+    </div>
+    <div class="form-group">
+        <label  for="dateOuverture">date ouverture</label>
+        <input  #dateouverture required [(ngModel)]="concessiondata[1]" name="dateOuverture" [class.is-invalid]="dateouverture.invalid" type="date" class="form-control">
+    </div>
+    {{dateouverture.className}}
+    <div class="form-group">
+        <label  for="dateCloture">date cloture</label>
+        <input  [(ngModel)]="concessiondata[2]" name="dateCloture"  type="date" class="form-control">
+    </div>
+    <div class="form-group">
+        <label  for="lieu">lieu Concession</label>
+        <select [(ngModel)]="concessiondata[3]" name="lieu_concession"  class="form-control">
+          
+            <option *ngFor="let item of listofLocation" value="{{item}}">{{item}}</option>
+        
+        </select>
+    </div>
+    <button [disabled]="concessionform.form.invalid" class="btn btn-primary" type="submit">submit form</button>
+    
+    
+</form>

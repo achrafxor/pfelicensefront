@@ -1,0 +1,21 @@
+<form #locationform="ngForm" novalidat (ngSubmit)="onSubmit()" >
+  {{locationform.value|json}}
+  <br>
+  {{locationdata|json}}
+  <div class="form-group">
+    <label for="pays">pays</label>
+    <input required #pays="ngModel"  [(ngModel)]="locationdata[0]"  name="pays"  type="text" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="region">region</label>
+    <input required #region="ngModel"  [(ngModel)]="locationdata[1]"  name="region"  type="text" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="zip">zip</label>
+    <input required #zip="ngModel"  [(ngModel)]="locationdata[2]"  name="zip"  type="text" class="form-control">
+  </div>
+
+  <button [disabled]="locationform.form.invalid" class="btn btn-primary" type="submit">submit form</button>
+
+</form>
+

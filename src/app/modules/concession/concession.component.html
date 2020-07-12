@@ -1,0 +1,11 @@
+<div class="row ">
+    <div style="text-align: start;">
+        <button mat-button class="add-btn" (click)="openDialogueAdd()"><mat-icon class="add-icon">add_circle</mat-icon></button>
+
+    </div>
+</div>
+<app-table [ELEMENT_DATA]="concessionlist"  (updateClicked)="updateData($event)"></app-table>
+
+
+    
+   

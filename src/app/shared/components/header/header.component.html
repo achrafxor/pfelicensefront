@@ -1,0 +1,40 @@
+
+<mat-toolbar color="">
+    <mat-toolbar-row>
+        
+        <button mat-icon-button (click)="toggleSideBar()">
+            <mat-icon>menu</mat-icon >
+        </button>
+        <span>Etap</span>
+        <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
+            <li>
+                <button mat-icon-button>
+                    <mat-icon>settings</mat-icon>
+                </button>
+            
+              
+                <button mat-button [mat-menu-trigger-for]="menu">
+                    <mat-icon>person_outline</mat-icon>
+                </button>
+                <mat-menu #menu="matMenu">
+                  <a routerLinkActive="list-item-active" routerLink="/user">
+                  <button mat-menu-item>
+                    
+                      <mat-icon>settings</mat-icon>
+                    manage user
+                    
+                    
+
+                  </button>
+                </a>
+                  <button mat-menu-item>
+                        <mat-icon> exit_to_app</mat-icon>
+                        Sign out
+
+                  </button>
+                    
+                </mat-menu>
+            </li>
+        </div>
+    </mat-toolbar-row>
+</mat-toolbar>

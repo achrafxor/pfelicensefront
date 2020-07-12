@@ -1,0 +1,20 @@
+<form #wellform="ngForm" novalidate (ngSubmit)="onSubmit()">
+  {{wellform.value|json}}
+    <br>
+    {{welldata|json}}
+    <div class="form-group">
+        <label for="nom">nom puit</label>
+        <input required #nom="ngModel"  [(ngModel)]="welldata[0]" name="nom"  type="text" class="form-control">
+    </div>
+    
+    <div class="form-group">
+        <label for="concession">concession</label>
+        <select required #concession="ngModel"  [(ngModel)]="welldata[1]"  name="concession"  class="form-control">
+          
+            <option *ngFor="let item of listOfConcessionId"  value="{{item}}">{{item}}</option>
+        
+        </select>
+    </div>
+    <button [disabled]="wellform.form.invalid" class="btn btn-primary" type="submit">submit form</button>
+
+</form>

@@ -1,0 +1,22 @@
+<form #tierform="ngForm" novalidate (ngSubmit)="onSubmit()">
+  {{tierform.value|json}}
+  <br>
+  {{tierdata|json}}
+  <div class="form-group">
+    <label for="nom">nom</label>
+    <input required #nom="ngModel"  [(ngModel)]="tierdata[0]"  name="nom"  type="text" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="tel">tel</label>
+    <input required #tel="ngModel"  [(ngModel)]="tierdata[1]"  name="tel"  type="text" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="lieu">lieu</label>
+    <select required #lieu="ngModel" [(ngModel)]="tierdata[2]" name="lieu" class="form-control" type="number">
+      <option *ngFor="let item of listOfLocationId" value="{{item}}">{{item}} </option>
+
+    </select>
+  </div>
+  <button [disabled]="tierform.form.invalid" class="btn btn-primary" type="submit">submit form</button>
+
+</form>

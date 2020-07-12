@@ -1,0 +1,7 @@
+<div class="row ">
+  <div style="text-align: start;">
+      <button mat-button class="add-btn" (click)="openAddDialogue()"><mat-icon class="add-icon">add_circle</mat-icon></button>
+
+  </div>
+</div>
+<app-table [ELEMENT_DATA]="LocationList" (updateClicked)="openUpdateDialogue($event)"></app-table>

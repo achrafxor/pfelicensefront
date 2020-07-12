@@ -1,0 +1,22 @@
+<form #productform="ngForm" novalidate (ngSubmit)="onSubmit()" >
+  {{productform.value|json}}
+  <br>
+  {{productdata|json}}
+  <div class="form-group">
+    <label for="qualite">qualite</label>
+    <input required #qualite="ngModel"  [(ngModel)]="productdata[0]"  name="qualite"  type="text" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="qualite">type</label>
+    <select required #type="ngModel" [(ngModel)]="productdata[1]" name="type" class="form-control" type="text">
+      <option value="petrole">petrole</option>
+      <option value="gaz">gaz</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="qte">quantite</label>
+    <input required #qte="ngModel"  [(ngModel)]="productdata[2]"  name="qte"  type="number" class="form-control">
+  </div>
+  <button [disabled]="productform.form.invalid" class="btn btn-primary" type="submit">submit form</button>
+
+</form>

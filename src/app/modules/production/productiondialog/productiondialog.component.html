@@ -1,0 +1,43 @@
+<form #productionform="ngForm" novalidate (ngSubmit)="onSubmit()" >
+    {{productionform.value|json}}
+    <br>
+    {{productiondata|json}}
+    <div class="form-group">
+        <label for="qte">quantite</label>
+        <input required #qte="ngModel"  [(ngModel)]="productiondata[0]"  name="qte"  type="number" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="cout">cout</label>
+        <input required #cout="ngModel"  [(ngModel)]="productiondata[1]"   name="cout"  type="number" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="date">date</label>
+        <input required #date="ngModel"  [(ngModel)]="productiondata[2]"   name="date"  type="date" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="produit">produit</label>
+        <select required #produit="ngModel"  [(ngModel)]="productiondata[3]"  name="produit"  class="form-control">
+          
+            <option *ngFor="let item of listOfProductId" value="{{item}}">{{item}}</option>
+        
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="concession">concession</label>
+        <select required #concession="ngModel"  [(ngModel)]="productiondata[4]"  name="concession"  class="form-control">
+          
+            <option *ngFor="let item of listOfConcessionId" value="{{item}}">{{item}}</option>
+        
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="puit">puit</label>
+        <select required #puit="ngModel"  [(ngModel)]="productiondata[5]"  name="puit"  class="form-control">
+          
+            <option *ngFor="let item of listOfPuitId" value="{{item}}">{{item}}</option>
+        
+        </select>
+    </div>
+    <button [disabled]="productionform.form.invalid" class="btn btn-primary" type="submit">submit form</button>
+
+</form>

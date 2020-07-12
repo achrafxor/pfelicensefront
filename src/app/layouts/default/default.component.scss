@@ -1,0 +1,21 @@
+:host {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+mat-drawer-container {
+	height: 100%;
+}
+mat-drawer {
+	width: 175px;
+}
+mat-drawer-content {
+	padding: 20px;
+}
+.bodyx {
+	background-color: #00084f;
+	background-image: url("/assets/baril3.webp");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}

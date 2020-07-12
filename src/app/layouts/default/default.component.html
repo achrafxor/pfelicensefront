@@ -1,0 +1,8 @@
+<app-header     (togglesidebarevent)="sidebartoggle($event)"></app-header>
+
+<mat-drawer-container class="bodyx">
+    <mat-drawer mode="side" [opened]="sidebaropened"> <app-sideabar></app-sideabar> </mat-drawer>
+    <mat-drawer-content> <router-outlet></router-outlet> </mat-drawer-content>
+</mat-drawer-container>
+
+<app-footer></app-footer>   

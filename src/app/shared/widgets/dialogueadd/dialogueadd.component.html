@@ -1,0 +1,23 @@
+<h1 mat-dialog-title>Add </h1>
+<div matDialogContent [formGroup]="form" > 
+    <div *ngFor="let control of form.controls;index as i">
+        
+        <mat-form-field >
+            <mat-label>{{labels[i].name}}</mat-label>
+            
+                <input matInput [formControl]="form.controls[i]"  type="{{labels[i].type}}"/>
+
+            
+            
+            
+    
+        </mat-form-field>
+
+    </div>
+    
+
+</div>
+<mat-dialog-actions>
+    <button mat-button (click)="close()">No Thanks</button>
+
+</mat-dialog-actions>

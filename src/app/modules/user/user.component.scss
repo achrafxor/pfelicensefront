@@ -1,0 +1,63 @@
+.user-img {
+	text-align: center;
+	padding: 0px;
+	height: 150px;
+	width: 150px;
+	margin-bottom: 50px;
+	position: absolute;
+	z-index: 9999;
+	top: -75px;
+	left: 80px;
+}
+.user-img img {
+	border-radius: 100%;
+	width: 100%;
+	height: 100%;
+}
+.user-name {
+	width: 150px;
+	text-align: center;
+	color: #ddd;
+}
+.profile-edit {
+	position: absolute;
+	top: 55px;
+	left: 190px;
+}
+.cover-img img {
+	height: 300px;
+	width: 100%;
+}
+.camera-btn {
+	color: red;
+	background-color: transparent;
+	border: none;
+}
+.maincover {
+	box-shadow: 4px 4px 4px black;
+}
+h2 {
+	margin: 0px;
+}
+.left {
+	padding-top: 100px;
+	width: 100%;
+	height: 100%;
+	color: white;
+}
+.col-sm-3,
+.col-sm-9 {
+	padding: 0px;
+}
+.right {
+	background-color: #ecf0f1;
+	width: 100%;
+	height: 100%;
+	padding: 10px 10px 10px 10px;
+}
+.right h2 {
+	color: #00074e;
+}
+.row {
+	margin: 0px;
+}

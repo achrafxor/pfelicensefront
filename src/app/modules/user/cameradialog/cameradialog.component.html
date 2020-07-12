@@ -1,0 +1,12 @@
+<form #cameraform="ngForm" style="text-align: center;">
+  <div class="form-group">
+    <mat-icon>camera</mat-icon>
+  </div>
+  <div class="form-group">
+    <input type="file" id="image" (change)="onSelectedFile($event)">
+    
+  </div>
+ <div class="form-group">
+  <button >upload</button>
+ </div> 
+</form>
