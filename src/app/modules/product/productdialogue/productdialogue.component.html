@@ -1,7 +1,5 @@
 <form #productform="ngForm" novalidate (ngSubmit)="onSubmit()" >
-  {{productform.value|json}}
-  <br>
-  {{productdata|json}}
+ 
   <div class="form-group">
     <label for="qualite">qualite</label>
     <input required #qualite="ngModel"  [(ngModel)]="productdata[0]"  name="qualite"  type="text" class="form-control">

@@ -1,7 +1,5 @@
 <form #productionform="ngForm" novalidate (ngSubmit)="onSubmit()" >
-    {{productionform.value|json}}
-    <br>
-    {{productiondata|json}}
+
     <div class="form-group">
         <label for="qte">quantite</label>
         <input required #qte="ngModel"  [(ngModel)]="productiondata[0]"  name="qte"  type="number" class="form-control">
